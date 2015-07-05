@@ -1,0 +1,83 @@
+Host gerrit_server 
+	HostName 121.40.153.83
+	User xingxing.wang
+	Port 29418
+	IdentityFile ~/.ssh/id_rsa.pub
+
+Host gerrit 
+	HostName 121.40.153.83
+	User yangrui 
+
+Host build
+	HostName 114.215.169.34
+	User app.stable
+	Port 22222
+
+Host buildact
+	HostName 114.215.169.34
+	User stable.act
+	Port 22222
+
+Host buildol
+	HostName 114.215.169.34
+	User tqmall.app 
+	Port 22222
+
+Host buildolact
+	HostName 114.215.169.34
+	User tqmall.act
+	Port 22222
+
+Host log4 
+	HostName 114.215.237.83 
+	User tqmall.log
+	Port 22222
+
+Host log8 
+	HostName 121.40.202.220 
+	User tqmall.log
+	Port 22222
+
+Host redis_online 
+	HostName 114.215.186.86 
+	User tqmall.redis
+	Port 22222
+	
+Host aliyun 
+	HostName 42.96.188.208
+	User xing 
+
+Host testscm
+	HostName 112.124.66.38
+	User tqmall.scm
+	Port 22222
+
+Host sea_online 
+	HostName 121.41.58.245 
+	User tqmall.sea
+	Port 22222
+
+Host redis_test 
+	HostName 121.40.196.235 
+	User test.redis 
+	Port 22222
+
+Host memcache_test
+	HostName 115.29.11.2 
+	User test.memcached
+	Port 22222
+
+Host jump
+	HostName 121.40.123.39
+	User xingxing.wang
+	Port 22222
+
+Host es_test
+	HostName 112.124.11.106
+	User tqmall.es
+	Port 22222
+
+Host es_stable
+	HostName 114.215.169.216
+	User tqmall.search
+	Port 22222
