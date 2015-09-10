@@ -1,39 +1,34 @@
-Host gerrit_server 
-	HostName 121.40.153.83
-	User xingxing.wang
-	Port 29418
-	IdentityFile ~/.ssh/id_rsa.pub
-
-Host gerrit 
-	HostName 121.40.153.83
-	User yangrui 
-
-Host build
+Host iserver_build
 	HostName 114.215.169.34
 	User app.stable
 	Port 22222
 
-Host buildact
+Host iserver_buildact
 	HostName 114.215.169.34
 	User stable.act
 	Port 22222
 
-Host buildol
+Host iserver_buildol
 	HostName 114.215.169.34
 	User tqmall.app 
 	Port 22222
 
-Host buildolact
+Host iserver_buildolact
 	HostName 114.215.169.34
 	User tqmall.act
 	Port 22222
 
-Host log4 
+Host iserver_buildolstall
+	HostName 114.215.169.34
+	User ol.stall
+	Port 22222
+
+Host iserver_log4 
 	HostName 114.215.237.83 
 	User tqmall.log
 	Port 22222
 
-Host log8 
+Host iserver_log8 
 	HostName 121.40.202.220 
 	User tqmall.log
 	Port 22222
@@ -43,28 +38,24 @@ Host redis_online
 	User tqmall.redis
 	Port 22222
 	
-Host aliyun 
-	HostName 42.96.188.208
-	User xing 
+Host redis_test 
+	HostName 121.40.196.235 
+	User test.redis 
+	Port 22222
 
 Host testscm
 	HostName 112.124.66.38
 	User tqmall.scm
 	Port 22222
 
+Host testscm78
+	HostName 121.41.128.78 
+	User tqmall.scm
+	Port 22222
+
 Host sea_online 
 	HostName 121.41.58.245 
 	User tqmall.sea
-	Port 22222
-
-Host redis_test 
-	HostName 121.40.196.235 
-	User test.redis 
-	Port 22222
-
-Host memcache_test
-	HostName 115.29.11.2 
-	User test.memcached
 	Port 22222
 
 Host jump
@@ -80,4 +71,24 @@ Host es_test
 Host es_stable
 	HostName 114.215.169.216
 	User tqmall.search
+	Port 22222
+
+Host es_goods_slave
+	HostName 115.29.11.2 
+	User tqmall.search2
+	Port 22222
+
+Host es_goods_master
+	HostName 115.29.205.51 
+	User tqmall.es
+	Port 22222
+
+Host es_ol_other
+	HostName 121.40.175.187 
+	User tqmall.es
+	Port 22222
+
+Host dandelion_dev
+	HostName 115.29.220.170
+	User tqmall.dandelion
 	Port 22222
