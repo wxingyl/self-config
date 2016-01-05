@@ -218,3 +218,21 @@ Hello human
 
 1. idk 1.7添加指令`invokedynamic`。
 2. 变量无类型而变量值才有类型是动态类型语言的一个重要特征。
+
+## 知识点
+
+### HotSpot虚拟机传参方式
+
+以-XX开头的非稳定参数，传参方式有3种：
+
+1. `-XX:+<option>`  开启option参数
+2. `-XX:-<option>` 关闭option参数
+3. `-XX:<option>=<value>` 讲option参数的值设置为value
+
+给JVM传参，通过`System.getProperty(key)`获取对应的值，起设置`-D<key>=<value>`, 如下
+
+``` java
+-Dtq_search.local.port=8080
+System.getProperty("tq_search.local.port")
+```
+
