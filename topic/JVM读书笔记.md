@@ -236,3 +236,24 @@ Hello human
 System.getProperty("tq_search.local.port")
 ```
 
+### 移位运算符
+
+1. `<<` 左移运算符， `num << 1`， 乘2，保留符号位
+2. `>>` 右移运算符，`num >> 1`， 除2，保留符号位
+3. `>>>` 无符号右移运算符，空位以 0 补齐
+
+注意，没有`<<<` 运算符如下：
+
+``` java
+    public static void main(String args[]) {
+        System.out.println("-1 >> 1: " + (-1 >> 1));
+        System.out.println("-1 >>> 1: " + (-1 >>> 1));
+    }
+```
+
+Output:
+
+``` java
+-1 >> 1: -1
+-1 >>> 1: 2147483647
+```
