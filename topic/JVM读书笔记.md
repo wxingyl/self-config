@@ -8,7 +8,7 @@
 
 #### 开始加载的时机
 
-1. 遇到new，getstatic, putstatic, 或 invokestatic这4条指令时，有虚拟机具体实现把握(注意：被final修饰，已在编译期把结果放入到常量池的静态字段除外)。
+1. 遇到new, getstatic, putstatic, 或 invokestatic这4条指令时，有虚拟机具体实现把握(注意：被final修饰，已在编译期把结果放入到常量池的静态字段除外)。
 2. 对类进行反射调用。
 3. 初始化一个类时，发现其父类还没有进行过初始化，则先触发其父类的初始化。
 4. 启动虚拟机时，main()方法所在的类。
@@ -21,15 +21,15 @@
 #### 准备
 
 1. 类成员变量执行初始赋值，仅包括类(static修饰)成员变量，不包括实例变量，实例变量在对象实例化时随着对象一起分配到Java堆中。
-   
+
 2. 这儿的初始赋值，非final修饰为数据类型的零值，如
-   
+
    ```public static int value = 123;```
-   
+
    其初始值为0，而不是123，`reference`类型初始零值为`null`
-   
+
 3. 对于类成员存在ConstantValue属性，则准备阶段变量value初始化为ConstantValue属性所指定的值，如下则为`123`
-   
+
    ```public static final int value = 123 ```
 
 #### 初始化
@@ -99,9 +99,9 @@
 #### 破坏双亲委派模型
 
 1. 作为经常被用户调用的基础类，有时候可能会调用回用户的代码，比如JNDI服务，JDBC等。
-   
+
    线程上下文类加载器(Thread Context ClassLoader)，通过`Thread.setContextClassLoader()` 方法设置。
-   
+
 2. 用户对程序动态性的追求导致，如热部署，模块热替换等。
 
 
@@ -223,6 +223,8 @@ Hello human
 
 ### HotSpot虚拟机传参方式
 
+####参数定义格式
+
 以-XX开头的非稳定参数，传参方式有3种：
 
 1. `-XX:+<option>`  开启option参数
@@ -235,6 +237,24 @@ Hello human
 -Dtq_search.local.port=8080
 System.getProperty("tq_search.local.port")
 ```
+
+####jvm参数默认值
+
+可以用下面几个JVM参数查看所有的JVM可设置参数，并且可以看到默认值
+
+```shell
+-XX:+PrintFlagsFinal
+-XX:+PrintFlagsInitial
+```
+
+可与上面2个选项一起使用的选项：
+
+```shell
+-XX:+UnlockDiagnosticVMOptions
+-XX:+AggressiveOpts
+```
+
+
 
 ### 移位运算符
 
