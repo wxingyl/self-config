@@ -50,7 +50,7 @@
 
 1. 启动类加载器(Bootstrap ClassLoader)：加载`$JAVA_HOME/lib/`，或者被`-Xbootclasspath`指定的路径中，并且文件名被虚拟机识别的类库加载到虚拟机中，比如`rt.jar`。
 2. 扩展类加载器(Extension ClassLoader)：加载`$JAVA_HOME/lib/ext/`目录或者被`java.ext.dirs`系统环境变量所指定的路径中的所有类库。
-3. 应用程序类加载器(Application ClassLoader)：这货就是`getSystemClassLoader()`方法的返回值。
+3. 应用程序类加载器(Application ClassLoader)：classPath 指定的class，这货就是`getSystemClassLoader()`方法的返回值。
 
 #### 双亲委派模型
 
